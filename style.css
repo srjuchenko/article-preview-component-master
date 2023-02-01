@@ -20,6 +20,10 @@ body {
   background-color: hsl(210, 46%, 95%);
 }
 
+.hidden {
+  display: none;
+}
+
 .share-modal.hidden {
   display: none;
 }
@@ -33,6 +37,7 @@ body {
 }
 
 .card-img .head-img {
+  height: 200px;
   width: 100%;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
@@ -112,11 +117,15 @@ body {
 
 .share-modal ul {
   display: flex;
+  align-items: center;
   list-style: none;
   gap: 15px;
 }
 
 .share-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
   font-size: 11px;
   color: hsl(212, 23%, 69%);
@@ -130,10 +139,83 @@ body {
 }
 
 /* FOOTER */
+footer {
+  margin-top: 10px;
+}
 .attribution {
   font-size: 11px;
   text-align: center;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 740px) {
+  body {
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .card {
+    max-width: 730px;
+    display: flex;
+    position: relative;
+  }
+
+  .card-img .head-img {
+    width: 280px;
+    height: 100%;
+    border-top-right-radius: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  .card .card-info .card-info-head h1 {
+    font-size: 20px;
+  }
+
+  .card .card-info {
+    padding: 35px 40px;
+  }
+
+  .share-modal {
+    clip-path: polygon(
+      5% 0%,
+      95% 0%,
+      98.75% 1.25%,
+      100% 5%,
+      100% 80%,
+      98.75% 83.75%,
+      95% 85%,
+      55% 85.37%,
+      49.8% 100%,
+      45% 85%,
+      5% 85%,
+      1.25% 83.75%,
+      0% 80%,
+      0% 5%,
+      1.25% 1.25%
+    );
+
+    width: 245px;
+    padding: 0;
+    height: 60px;
+    border-radius: 10px;
+    bottom: 88px;
+    right: -68px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .close-modal {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -50px;
+  }
+
+  .card .card-info .card-info-contact {
+    margin-top: 20px;
+  }
 }

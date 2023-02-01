@@ -3,7 +3,7 @@ const closeModalBtn = document.querySelector(".close-modal");
 const modal = document.querySelector(".share-modal");
 
 openModalBtn.addEventListener("click", function () {
-  modal.classList.remove("hidden");
+  modal.classList.toggle("hidden");
 });
 
 closeModalBtn.addEventListener("click", function () {
